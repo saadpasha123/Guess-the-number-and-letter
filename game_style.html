@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAme Style</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <h2>Choose which type of game!</h2>
+    <p>You have to choose either you play letter or number game!1</p>
+    <form action="/game_style" method="POST">
+        <div class="cha">
+            <select name="game_style">
+                <option value="letter">LETTER</option>
+                <option value="number">NUMBER</option>
+            </select>
+        </div>
+    <h2>Choose which type of difficulty level you want!</h2>   
+        <select name="difficult">
+            <option value="easy">easy</option>
+            <option value="medium">medium</option>
+            <option value="hard">hard</option>
+        </select>
+        <button type="submit">Start game</button>
+    </form>
+</body>
+</html>

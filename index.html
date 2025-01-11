@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUESS THE GAME</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <h1>WELCOME TO THE GUESS THE GAME</h1>
+    <nav>
+    {% if username %}
+        <a href="/logout">LOGOUT</a>
+        <a href="/play_game">PLAY GAME</a>
+        <a href="/register">REGISTER</a>
+        <a href="/login">LOGIN</a>
+        <p>WELCOME {{username}}</p>
+    {%endif%}
+    </nav>
+    <h1>WELCOME TO THE GUESS THE GAME</h1>
+    <ul>
+        <h2>Before starting the game, must read the following instructions.</h2>
+            <li>Choose the game style: number guessing or letter guessing.</li>
+            <li>Select a difficulty: Easy, Medium, or Hard.</li>
+            <li>If you choose number guessing, try to guess the correct number within the given range based on the difficulty level.</li>
+            <li>If you choose letter guessing, try to guess the correct letter from the alphabet.</li>
+            <li>For each correct guess, you will be told how many attempts it took to find the answer.</li>
+            <li>After you guess correctly, you can try to improve your score and beat your previous best!</li>
+            <li>Sign up to be on the Leaderboard and track your progress!</li>
+    </ul>
+    <h2>Choose which type of game!</h2>
+    <p>You have to choose either you play letter or number game!1</p>
+    <form action="/game_style" method="POST">
+        <select name="game_style">
+            <option value="choose">select game</option>
+            <option value="letter">LETTER</option>
+            <option value="numbers">NUMBER</option>
+        </select>
+    <h2>Choose which type of difficulty level you want!</h2>   
+        <select name="difficult">
+            <option value="choose level">select level</option>
+            <option value="easy">easy</option>
+            <option value="medium">medium</option>
+            <option value="hard">hard</option>
+        </select>
+        <button type="submit">Start game</button>
+    </form>
+    <p>If you read all these instructions then click on either register or login page.</p>    
+    <section class="account">
+        <a href="/register" class="button">Register</a>
+        <a href="/login" class="button">Login</a>
+    </section>
+</body>
+</html>

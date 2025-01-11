@@ -1,0 +1,40 @@
+body{
+    background-image: url('guess.jpg');
+    background-size: cover;
+    padding: 0%;
+    margin: 0%;
+    width: auto;
+    height: auto;
+}
+
+h1{
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkgreen;
+}
+nav a{
+    text-decoration: blue;
+    cursor: pointer;
+    color: aqua;
+    text-shadow: none;
+    text-align: center;
+    align-items: center;
+    
+}
+p{
+    color: black;
+    size: 16px;
+}
+li{
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.account a{
+    color: aqua;
+    cursor: pointer;
+    text-align: justify;
+}
+.nass a{
+    color: chocolate;
+    cursor: pointer;
+}
